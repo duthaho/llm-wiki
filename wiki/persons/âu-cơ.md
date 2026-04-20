@@ -8,9 +8,8 @@ tags:
   - thần thoại
   - Hùng Vương
 sources:
-  - https://vi.wikipedia.org/wiki/Âu_Cơ
+  - 'https://vi.wikipedia.org/wiki/Âu_Cơ'
 ---
-
 ## Tóm tắt
 Âu Cơ (2825–2520 TCN) là một nhân vật trong [[truyền thuyết]] Việt Nam, được xem là tổ mẫu của người Việt. Bà gắn liền với truyền thuyết [[Lạc Long Quân]], cùng nhau sinh ra một trăm người con, trở thành nguồn gốc của dân tộc Việt và hình thành nên hình tượng [[Con Rồng cháu Tiên]]. Câu chuyện về bà được ghi chép sớm nhất trong [[Lĩnh Nam chích quái]] và sau đó được đưa vào chính sử trong [[Đại Việt Sử ký Toàn thư]].
 

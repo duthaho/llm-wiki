@@ -9,9 +9,8 @@ tags:
   - khảo cổ
   - Đông Nam Á
 sources:
-  - https://vi.wikipedia.org/wiki/Văn_hóa_Hòa_Bình
+  - 'https://vi.wikipedia.org/wiki/Văn_hóa_Hòa_Bình'
 ---
-
 ## Tóm tắt
 Văn hóa Hòa Bình là một nền văn hóa tiền sử trải dài từ thời đại đồ đá cũ sang thời đại đồ đá mới, có niên đại cách ngày nay khoảng 15.000 năm đến 2.000 năm trước Công Nguyên. Được chính thức công nhận vào ngày 30 tháng 1 năm 1932 theo đề xuất của [[Madeleine Colani]], đây là một trong những nền văn hóa tiền sử quan trọng nhất của vùng [[Đông Nam Á]], có phạm vi phân bố rộng lớn từ Việt Nam đến nhiều quốc gia trong khu vực.
 

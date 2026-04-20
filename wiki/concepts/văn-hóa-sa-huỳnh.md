@@ -7,9 +7,8 @@ tags:
   - khảo cổ
   - miền Trung
 sources:
-  - https://vi.wikipedia.org/wiki/Văn_hóa_Sa_Huỳnh
+  - 'https://vi.wikipedia.org/wiki/Văn_hóa_Sa_Huỳnh'
 ---
-
 ## Tóm tắt
 Văn hóa Sa Huỳnh là một nền văn hóa khảo cổ hình thành khoảng năm 1000 TCN đến cuối thế kỷ thứ 2, phân bố chủ yếu dọc ven biển miền Trung Việt Nam. Đây là một trong ba cái nôi văn minh cổ đại trên lãnh thổ Việt Nam, cùng với [[Văn hóa Đông Sơn]] và [[Văn hóa Đồng Nai]] tạo thành tam giác văn hóa thời kỳ đồ sắt. Nền văn hóa này được biết đến qua những tập tục mai táng độc đáo bằng mộ chum, đồ trang sức tinh xảo và kỹ thuật làm thủy tinh nhân tạo tiên tiến.
 

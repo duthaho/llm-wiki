@@ -9,9 +9,8 @@ tags:
   - khảo cổ
   - di tích quốc gia
 sources:
-  - https://vi.wikipedia.org/wiki/Cổ_Loa
+  - 'https://vi.wikipedia.org/wiki/Cổ_Loa'
 ---
-
 ## Tóm tắt
 
 Thành Cổ Loa là kinh đô của nhà nước [[Âu Lạc]] dưới thời [[An Dương Vương]] vào khoảng thế kỷ thứ 3 trước Công nguyên, tọa lạc tại xã [[Đông Anh]], thành phố [[Hà Nội]] ngày nay. Đây cũng từng là kinh đô của [[Nhà Ngô]] dưới thời [[Ngô Quyền]] vào thế kỷ 10. Cổ Loa được đánh giá là tòa thành cổ nhất, quy mô lớn và cấu trúc độc đáo nhất trong lịch sử xây dựng thành lũy của người Việt cổ.

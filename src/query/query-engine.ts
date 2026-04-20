@@ -1,4 +1,4 @@
-import Anthropic from '@anthropic-ai/sdk';
+import type { LLMClient } from '../llm/types.js';
 import type { WikiManager } from '../wiki/wiki-manager.js';
 
 export interface QueryContext {
@@ -29,10 +29,10 @@ ${contextBlock}
 }
 
 export async function queryWiki(
-  client: Anthropic,
+  client: LLMClient,
   wiki: WikiManager,
   question: string,
-  model: string = 'claude-sonnet-4-6',
+  model: string,
 ): Promise<string> {
   // Search for relevant pages
   // Vietnamese words can be short (vua, ai, la) — use low threshold
@@ -64,14 +64,9 @@ export async function queryWiki(
 
   const prompt = buildQueryPrompt(question, context);
 
-  const response = await client.messages.create({
+  return client.complete({
     model,
     max_tokens: 2048,
     messages: [{ role: 'user', content: prompt }],
   });
-
-  return response.content
-    .filter((block): block is Anthropic.TextBlock => block.type === 'text')
-    .map(block => block.text)
-    .join('');
 }

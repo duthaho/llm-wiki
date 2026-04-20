@@ -1,16 +1,15 @@
 ---
 title: An Dương Vương
 type: person
-era: ancient
+era: prehistoric
 tags:
   - vua
   - Âu Lạc
   - Âu Việt
   - thời kỳ dựng nước
 sources:
-  - https://vi.wikipedia.org/wiki/An_Dương_Vương
+  - 'https://vi.wikipedia.org/wiki/An_Dương_Vương'
 ---
-
 ## Tóm tắt
 
 [[An Dương Vương]] (chữ Hán: 安陽王), tên thật là Thục Phán (蜀泮), là người sáng lập và cai trị duy nhất của nước [[Âu Lạc]]. Là thủ lĩnh của các bộ lạc [[Âu Việt]], ông đã đánh bại vị vua [[Hùng Vương]] cuối cùng của [[Văn Lang]], thống nhất hai bộ tộc Âu Việt và [[Lạc Việt]] thành một khối chung — tổ tiên của người Kinh ở Việt Nam ngày nay. Ông cai trị cho đến khi thất bại trước quân [[Nam Việt]] vào khoảng năm 179 TCN và phải tự vẫn.

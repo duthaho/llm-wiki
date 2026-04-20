@@ -8,9 +8,8 @@ tags:
   - chống ngoại xâm
   - tín ngưỡng dân gian
 sources:
-  - https://vi.wikipedia.org/wiki/Thánh_Gióng
+  - 'https://vi.wikipedia.org/wiki/Thánh_Gióng'
 ---
-
 ## Tóm tắt
 
 Thánh Gióng (chữ Nôm: 聖揀), còn gọi là [[Phù Đổng Thiên Vương]] hay Sóc Thiên Vương, là một nhân vật trong truyền thuyết Việt Nam và là một trong [[Tứ Bất Tử]] trong tín ngưỡng dân gian người Việt. Ông được xem là biểu tượng của tinh thần chống ngoại xâm và sức mạnh tuổi trẻ, sinh ra tại làng [[Phù Đổng]], huyện [[Gia Lâm]] và hóa thánh trên đỉnh núi [[Sóc Sơn]]. Triều đại [[nhà Lý]], [[Lý Công Uẩn]] đã truy tôn ông là Xung Thiên Thần Vương.

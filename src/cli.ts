@@ -1,17 +1,20 @@
 import { Command } from 'commander';
-import Anthropic from '@anthropic-ai/sdk';
 import { fetchArticle } from './fetcher/wiki-api.js';
 import { getArticlesByEra } from './fetcher/article-list.js';
 import { RawStore } from './fetcher/raw-store.js';
-import { ingestArticle, ingestDiscoveredArticle, parseWikiPage } from './ingester/ingester.js';
+import { ingestArticle, ingestDiscoveredArticle, parseWikiPage, normalizePage } from './ingester/ingester.js';
 import { WikiManager } from './wiki/wiki-manager.js';
 import { queryWiki } from './query/query-engine.js';
 import { VALID_ERAS } from './schema/schema.js';
 import { buildGraphFile } from './graph/build-graph.js';
 import { findUnresolvedLinks } from './linker/link-resolver.js';
+import { createLLMClient, DEFAULT_MODELS } from './llm/index.js';
+import type { LLMProvider } from './llm/index.js';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { globSync } from 'glob';
+
+const VALID_PROVIDERS: LLMProvider[] = ['anthropic', 'nvidia'];
 
 const ROOT = process.cwd();
 const rawStore = new RawStore(join(ROOT, 'raw'));
@@ -28,15 +31,24 @@ program
   .command('ingest')
   .description('Fetch and compile Wikipedia articles into wiki pages')
   .argument('<era>', 'Era to ingest (e.g., prehistoric)')
-  .option('--model <model>', 'Claude model to use', 'claude-sonnet-4-6')
+  .option('--provider <provider>', 'LLM provider (anthropic|nvidia)', 'nvidia')
+  .option('--model <model>', 'Model to use (defaults per provider)')
   .option('--skip-existing', 'Skip articles already in wiki', false)
-  .action(async (era: string, opts: { model: string; skipExisting: boolean }) => {
+  .action(async (era: string, opts: { provider: string; model?: string; skipExisting: boolean }) => {
     if (!VALID_ERAS.includes(era as any)) {
       console.error(`Invalid era: ${era}\nAvailable eras: ${VALID_ERAS.join(', ')}`);
       process.exit(1);
     }
 
-    const client = new Anthropic();
+    const provider = opts.provider as LLMProvider;
+    if (!VALID_PROVIDERS.includes(provider)) {
+      console.error(`Invalid provider: ${provider}\nAvailable: ${VALID_PROVIDERS.join(', ')}`);
+      process.exit(1);
+    }
+
+    const model = opts.model ?? DEFAULT_MODELS[provider];
+    const client = createLLMClient(provider);
+    console.log(`Using ${provider} (${model})\n`);
     const articles = getArticlesByEra(era as any);
 
     if (articles.length === 0) {
@@ -78,8 +90,8 @@ program
         if (!raw) throw new Error('Failed to load raw article');
 
         // Ingest with LLM
-        console.log('  -> Compiling with Claude...');
-        const wikiPage = await ingestArticle(client, entry, raw.content, opts.model);
+        console.log(`  -> Compiling with ${provider}...`);
+        const wikiPage = await ingestArticle(client, entry, raw.content, model);
 
         // Save wiki page
         await wiki.savePage(category, slug, wikiPage);
@@ -98,11 +110,15 @@ program
   .command('query')
   .description('Ask a question about Vietnamese history')
   .argument('<question>', 'Your question in Vietnamese')
-  .option('--model <model>', 'Claude model to use', 'claude-sonnet-4-6')
-  .action(async (question: string, opts: { model: string }) => {
-    const client = new Anthropic();
-    console.log(`\nSearching wiki for: "${question}"\n`);
-    const answer = await queryWiki(client, wiki, question, opts.model);
+  .option('--provider <provider>', 'LLM provider (anthropic|nvidia)', 'nvidia')
+  .option('--model <model>', 'Model to use (defaults per provider)')
+  .action(async (question: string, opts: { provider: string; model?: string }) => {
+    const provider = opts.provider as LLMProvider;
+    const model = opts.model ?? DEFAULT_MODELS[provider];
+    const client = createLLMClient(provider);
+    console.log(`\nUsing ${provider} (${model})`);
+    console.log(`Searching wiki for: "${question}"\n`);
+    const answer = await queryWiki(client, wiki, question, model);
     console.log(answer);
   });
 
@@ -118,6 +134,37 @@ program
     console.log(`\n${pages.length} wiki pages:\n`);
     for (const page of pages) {
       console.log(`  [${page.era}] ${page.title} (${page.type}) -> ${page.path}`);
+    }
+  });
+
+program
+  .command('normalize')
+  .description('Fix malformed frontmatter in all wiki pages')
+  .option('--dry-run', 'Show what would change without writing', false)
+  .action(async (opts: { dryRun: boolean }) => {
+    const wikiDir = join(ROOT, 'wiki');
+    const files = globSync('**/*.md', { cwd: wikiDir });
+    let fixed = 0;
+
+    for (const file of files) {
+      const filePath = join(wikiDir, file);
+      const original = await readFile(filePath, 'utf-8');
+      const normalized = normalizePage(original);
+
+      if (original !== normalized) {
+        fixed++;
+        console.log(`  fix: ${file}`);
+        if (!opts.dryRun) {
+          const { writeFile: wf } = await import('node:fs/promises');
+          await wf(filePath, normalized, 'utf-8');
+        }
+      }
+    }
+
+    if (fixed === 0) {
+      console.log('All wiki pages are well-formed.');
+    } else {
+      console.log(`\n${fixed}/${files.length} pages ${opts.dryRun ? 'need fixing' : 'fixed'}.`);
     }
   });
 
@@ -139,10 +186,14 @@ program
   .command('follow-links')
   .description('Discover and ingest articles referenced by existing wiki pages')
   .option('--depth <n>', 'How many rounds of link following', '1')
-  .option('--model <model>', 'Claude model to use', 'claude-sonnet-4-6')
+  .option('--provider <provider>', 'LLM provider (anthropic|nvidia)', 'nvidia')
+  .option('--model <model>', 'Model to use (defaults per provider)')
   .option('--dry-run', 'Show what would be fetched without ingesting', false)
-  .action(async (opts: { depth: string; model: string; dryRun: boolean }) => {
-    const client = new Anthropic();
+  .action(async (opts: { depth: string; provider: string; model?: string; dryRun: boolean }) => {
+    const provider = opts.provider as LLMProvider;
+    const model = opts.model ?? DEFAULT_MODELS[provider];
+    const client = createLLMClient(provider);
+    console.log(`Using ${provider} (${model})\n`);
     const wikiDir = join(ROOT, 'wiki');
     const depth = parseInt(opts.depth, 10);
 
@@ -196,8 +247,8 @@ program
           if (!raw) throw new Error('Failed to load raw article');
 
           // Ingest with LLM (auto-classify type/era)
-          console.log('  -> Compiling with Claude...');
-          const wikiPage = await ingestDiscoveredArticle(client, wikiTitle, raw.content, opts.model);
+          console.log(`  -> Compiling with ${provider}...`);
+          const wikiPage = await ingestDiscoveredArticle(client, wikiTitle, raw.content, model);
 
           // Parse the generated page to determine category
           const parsed = parseWikiPage(wikiPage);

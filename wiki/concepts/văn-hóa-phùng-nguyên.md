@@ -9,9 +9,8 @@ tags:
   - khảo cổ
   - đồ đá mới
 sources:
-  - https://vi.wikipedia.org/wiki/Văn_hóa_Phùng_Nguyên
+  - 'https://vi.wikipedia.org/wiki/Văn_hóa_Phùng_Nguyên'
 ---
-
 ## Tóm tắt
 
 Văn hóa Phùng Nguyên là một nền văn hóa tiền sử thuộc sơ kỳ thời đại đồ đồng, cuối thời đại đồ đá mới, tồn tại từ cuối [[thiên niên kỷ III TCN]] đến nửa đầu [[thiên niên kỷ II TCN]]. Nền văn hóa này được đặt tên theo làng Phùng Nguyên thuộc [[huyện Lâm Thao]], [[tỉnh Phú Thọ]] — nơi đầu tiên phát hiện các di chỉ khảo cổ tương ứng. Đặc trưng nổi bật của văn hóa này là kỹ thuật chế tác đá và làm gốm đạt trình độ tinh xảo, cùng với sự xuất hiện ban đầu của đồ đồng và thuật luyện kim.

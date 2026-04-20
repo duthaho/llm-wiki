@@ -8,9 +8,8 @@ tags:
   - nhà nước đầu tiên
   - Hùng Vương
 sources:
-  - https://vi.wikipedia.org/wiki/Văn_Lang
+  - 'https://vi.wikipedia.org/wiki/Văn_Lang'
 ---
-
 ## Tóm tắt
 [[Văn Lang]] (chữ Hán: 文郎) là nhà nước đầu tiên trong lịch sử Việt Nam, cai trị bởi các [[Hùng Vương]], tương ứng với các thời kỳ [[văn hóa Đông Sơn]], [[Phùng Nguyên]], [[Gò Mun]] và [[Đồng Đậu]]. Lãnh thổ bao gồm một phần [[Trung Quốc]], [[Bắc Bộ]] và [[Bắc Trung Bộ]] ngày nay. Nhà nước này tồn tại cho đến năm 258 TCN thì bị [[An Dương Vương]] (tức [[Thục Phán]]) sáp nhập vào nước [[Âu Lạc]].
 

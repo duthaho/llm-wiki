@@ -8,9 +8,8 @@ tags:
   - thủy tổ
   - Hồng Bàng
 sources:
-  - https://vi.wikipedia.org/wiki/Lạc_Long_Quân
+  - 'https://vi.wikipedia.org/wiki/Lạc_Long_Quân'
 ---
-
 ## Tóm tắt
 Lạc Long Quân (chữ Hán: 貉龍君), tên húy là Sùng Lãm, là một vị vua truyền thuyết trong lịch sử Việt Nam, con của [[Kinh Dương Vương]] và [[Thần Long]] - con gái [[Động Đình Quân]]. Ông được xem là vị vua của nhà nước sơ khai [[Xích Quỷ]] và cùng với [[Âu Cơ]] được tôn là thủy tổ của dân tộc Việt Nam qua truyền thuyết "bọc trăm trứng". Con trai ông về sau thống nhất 15 bộ lạc, lập nên nhà nước [[Văn Lang]] và xưng hiệu [[Hùng Vương]] thứ nhất.
 

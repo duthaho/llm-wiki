@@ -6,9 +6,8 @@ tags:
   - truyền thuyết
   - thần thoại
 sources:
-  - https://vi.wikipedia.org/wiki/Sơn_Tinh_Thủy_Tinh
+  - 'https://vi.wikipedia.org/wiki/Sơn_Tinh_Thủy_Tinh'
 ---
-
 ## Tóm tắt
 Sơn Tinh – Thủy Tinh là một truyền thuyết nổi tiếng của [[văn hóa Việt Nam]], kể về cuộc chiến giữa [[Sơn Tinh]] và [[Thủy Tinh]] để giành nàng [[Mỵ Nương]], con gái của [[Hùng Duệ Vương|Vua Hùng thứ 18]]. Vì đem sính lễ muộn, Thủy Tinh không lấy được Mỵ Nương và nổi giận gây ra chiến tranh với Sơn Tinh. Trong văn học trung đại Việt Nam, Sơn Tinh thường được gọi là [[Tản Viên Sơn Thánh]], do ngài ngự trị trên [[núi Tản Viên]] (nay gọi là [[núi Ba Vì]]).
 

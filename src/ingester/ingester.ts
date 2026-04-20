@@ -1,7 +1,116 @@
-import Anthropic from '@anthropic-ai/sdk';
 import matter from 'gray-matter';
 import type { ArticleEntry } from '../fetcher/article-list.js';
-import type { WikiFrontmatter } from '../schema/schema.js';
+import type { WikiFrontmatter, WikiPageType, Era } from '../schema/schema.js';
+import { VALID_ERAS } from '../schema/schema.js';
+import type { LLMClient } from '../llm/types.js';
+
+// Maps Vietnamese values back to English enum values
+const TYPE_ALIASES: Record<string, WikiPageType> = {
+  'người': 'person', 'nhân vật': 'person',
+  'sự kiện': 'event', 'trận đánh': 'event',
+  'thời kỳ': 'era', 'thời đại': 'era',
+  'địa danh': 'place', 'địa điểm': 'place',
+  'khái niệm': 'concept', 'văn hóa': 'concept',
+  'triều đại': 'dynasty', 'nhà': 'dynasty',
+};
+
+const ERA_ALIASES: Record<string, Era> = {
+  'tiền sử': 'prehistoric', 'ancient': 'prehistoric', 'thời tiền sử': 'prehistoric',
+  'bắc thuộc': 'chinese-domination', 'bắc-thuộc': 'chinese-domination',
+  'thời bắc thuộc lần thứ nhất': 'chinese-domination',
+  'thời bắc thuộc lần thứ hai': 'chinese-domination',
+  'thời bắc thuộc lần thứ ba': 'chinese-domination',
+  'thời kỳ bắc thuộc': 'chinese-domination',
+  'thời kỳ bắc thuộc lần thứ ba': 'chinese-domination',
+};
+
+/**
+ * Fix malformed YAML frontmatter from LLMs that don't follow strict YAML.
+ * Handles: inline arrays, missing closing ---, Vietnamese enum values.
+ */
+export function normalizePage(raw: string): string {
+  // Extract raw text before and after frontmatter
+  let text = raw.trim();
+
+  // Remove code fences if present
+  const fenceMatch = text.match(/```(?:markdown|yaml)?\n([\s\S]*?)```/);
+  if (fenceMatch) text = fenceMatch[1].trim();
+
+  // Fix inline YAML arrays: "tags: - a - b - c" → proper list
+  text = text.replace(
+    /^(tags|sources):\s*-\s*(.+)$/gm,
+    (_match, field: string, rest: string) => {
+      // Split on " - " pattern (items separated by " - ")
+      const items = rest.split(/\s+-\s+/).map(s => s.trim()).filter(Boolean);
+      return `${field}:\n${items.map(i => `  - ${i}`).join('\n')}`;
+    },
+  );
+
+  // Fix inconsistent YAML list indentation (- item at col 0 after indented - item)
+  // Matches: a "field:\n" followed by a mix of "  - x" and "- x" lines
+  text = text.replace(
+    /^(tags|sources):\n((?:\s*- .+\n?)+)/gm,
+    (_match, field: string, block: string) => {
+      const items = block.split('\n')
+        .map(l => l.trim())
+        .filter(l => l.startsWith('- '))
+        .map(l => `  ${l}`);
+      return `${field}:\n${items.join('\n')}\n`;
+    },
+  );
+
+  // Ensure closing --- exists
+  const firstDash = text.indexOf('---');
+  if (firstDash !== -1) {
+    const afterFirst = text.indexOf('\n', firstDash) + 1;
+    const secondDash = text.indexOf('---', afterFirst);
+    if (secondDash === -1) {
+      // Find where frontmatter ends (first ## heading or blank line after key-value pairs)
+      const lines = text.slice(afterFirst).split('\n');
+      let insertAt = afterFirst;
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (line.startsWith('##') || (line === '' && i > 0 && lines[i - 1].trim() === '')) {
+          break;
+        }
+        insertAt += lines[i].length + 1;
+      }
+      text = text.slice(0, insertAt) + '---\n' + text.slice(insertAt);
+    }
+  }
+
+  // Parse and normalize frontmatter values
+  try {
+    const { data, content } = matter(text);
+
+    // Normalize type
+    if (data.type && typeof data.type === 'string') {
+      const lower = data.type.toLowerCase().trim();
+      data.type = TYPE_ALIASES[lower] ?? lower;
+    }
+
+    // Normalize era
+    if (data.era && typeof data.era === 'string') {
+      const lower = data.era.toLowerCase().trim();
+      data.era = ERA_ALIASES[lower] ?? lower;
+    }
+
+    // Ensure tags is an array
+    if (!Array.isArray(data.tags)) {
+      data.tags = data.tags ? String(data.tags).split(',').map((s: string) => s.trim()).filter(Boolean) : [];
+    }
+
+    // Ensure sources is an array
+    if (!Array.isArray(data.sources)) {
+      data.sources = data.sources ? [String(data.sources)] : [];
+    }
+
+    return matter.stringify(content.trim() + '\n', data);
+  } catch {
+    // If parsing fails, return as-is
+    return text;
+  }
+}
 
 export function buildIngestionPrompt(entry: ArticleEntry, content: string): string {
   return `You are a Vietnamese history wiki compiler. Given a raw Wikipedia article, produce a structured wiki page in Vietnamese.
@@ -139,50 +248,37 @@ ${content}`;
 }
 
 export async function ingestDiscoveredArticle(
-  client: Anthropic,
+  client: LLMClient,
   title: string,
   rawContent: string,
-  model: string = 'claude-sonnet-4-6',
+  model: string,
 ): Promise<string> {
   const wikiTitle = title.replace(/_/g, ' ');
   const wikiUrl = `https://vi.wikipedia.org/wiki/${encodeURIComponent(title)}`;
   const prompt = buildDiscoveryPrompt(wikiTitle, wikiUrl, rawContent);
 
-  const response = await client.messages.create({
+  const text = await client.complete({
     model,
     max_tokens: 4096,
     messages: [{ role: 'user', content: prompt }],
   });
 
-  const text = response.content
-    .filter((block): block is Anthropic.TextBlock => block.type === 'text')
-    .map(block => block.text)
-    .join('');
-
-  const fenceMatch = text.match(/```markdown\n([\s\S]*?)```/);
-  return fenceMatch ? fenceMatch[1].trim() : text.trim();
+  return normalizePage(text);
 }
 
 export async function ingestArticle(
-  client: Anthropic,
+  client: LLMClient,
   entry: ArticleEntry,
   rawContent: string,
-  model: string = 'claude-sonnet-4-6',
+  model: string,
 ): Promise<string> {
   const prompt = buildIngestionPrompt(entry, rawContent);
 
-  const response = await client.messages.create({
+  const text = await client.complete({
     model,
     max_tokens: 4096,
     messages: [{ role: 'user', content: prompt }],
   });
 
-  const text = response.content
-    .filter((block): block is Anthropic.TextBlock => block.type === 'text')
-    .map(block => block.text)
-    .join('');
-
-  // Extract markdown from code fence if present
-  const fenceMatch = text.match(/```markdown\n([\s\S]*?)```/);
-  return fenceMatch ? fenceMatch[1].trim() : text.trim();
+  return normalizePage(text);
 }

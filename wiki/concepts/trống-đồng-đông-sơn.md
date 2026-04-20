@@ -9,9 +9,8 @@ tags:
   - Đông Sơn
   - Lạc Việt
 sources:
-  - https://vi.wikipedia.org/wiki/Trống_đồng_Đông_Sơn
+  - 'https://vi.wikipedia.org/wiki/Trống_đồng_Đông_Sơn'
 ---
-
 ## Tóm tắt
 
 Trống đồng Đông Sơn (hay trống đồng Heger loại I) là loại trống đồng tiêu biểu của [[Văn hóa Đông Sơn]] (thế kỷ 7 TCN – thế kỷ 6 CN), do người [[Lạc Việt]] sáng tạo ra. Những chiếc trống này thể hiện trình độ cao về kỹ năng đúc đồng và nghệ thuật trang trí, phản ánh sinh động đời sống xã hội, tín ngưỡng và văn hóa của cư dân [[Văn Lang]] thời kỳ dựng nước. [[Bảo tàng Lịch sử Việt Nam]] hiện lưu giữ bộ sưu tập trống đồng Đông Sơn lớn nhất thế giới.

@@ -8,9 +8,8 @@ tags:
   - đồ đồng
   - tiền sử
 sources:
-  - https://vi.wikipedia.org/wiki/Văn_hóa_Đông_Sơn
+  - 'https://vi.wikipedia.org/wiki/Văn_hóa_Đông_Sơn'
 ---
-
 ## Tóm tắt
 
 Văn hóa Đông Sơn là một nền văn hóa cổ xuất hiện vào khoảng năm 800 trước Công Nguyên, phân bố dọc theo các con sông lớn ở miền Bắc và Bắc Trung Bộ Việt Nam, thuộc thời kỳ đồ đồng và đồ sắt sớm. Nền văn hóa này được đặt tên theo làng Đông Sơn ven [[sông Mã]], [[Thanh Hóa]], nơi các dấu tích đầu tiên được phát hiện vào năm 1924. Đây được coi là cơ sở hình thành nhà nước văn minh đầu tiên của người Việt là [[Văn Lang]] của các [[Vua Hùng]] và [[Âu Lạc]] của [[An Dương Vương]].

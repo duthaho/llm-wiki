@@ -8,9 +8,8 @@ tags:
   - Âu Việt
   - Lạc Việt
 sources:
-  - https://vi.wikipedia.org/wiki/Âu_Lạc
+  - 'https://vi.wikipedia.org/wiki/Âu_Lạc'
 ---
-
 ## Tóm tắt
 Âu Lạc là nhà nước cổ của người Việt, được thành lập bởi [[Thục Phán]] (tức [[An Dương Vương]]) tại miền Bắc Việt Nam. Nhà nước này hình thành trên cơ sở hợp nhất hai bộ tộc [[Âu Việt]] và [[Lạc Việt]], kế tục nhà nước [[Văn Lang]] của các [[Hùng Vương]]. Âu Lạc tồn tại trong khoảng thế kỷ 3 đến thế kỷ 2 TCN trước khi sụp đổ dưới tay [[Triệu Đà]] của [[Nam Việt]].
 

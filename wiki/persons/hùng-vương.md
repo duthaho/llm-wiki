@@ -9,9 +9,8 @@ tags:
   - Lạc Việt
   - quốc tổ
 sources:
-  - https://vi.wikipedia.org/wiki/H%C3%B9ng_V%C6%B0%C6%A1ng
+  - 'https://vi.wikipedia.org/wiki/H%C3%B9ng_V%C6%B0%C6%A1ng'
 ---
-
 ## Tóm tắt
 Hùng Vương (chữ Hán: 雄王) là danh hiệu dành cho các vị vua của nước [[Văn Lang]], quốc gia của người [[Lạc Việt]], tồn tại vào khoảng thế kỷ VII đến thế kỷ II trước Công nguyên. Theo sử liệu và truyền thuyết, các Hùng Vương trị vì tổng cộng 18 đời, được xem là quốc tổ của dân tộc Việt Nam.
 
