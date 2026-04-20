@@ -20,6 +20,28 @@ describe('validateFrontmatter', () => {
     expect(result.errors).toContain('title is required');
   });
 
+  it('should accept valid ho-dynasty frontmatter', () => {
+    const fm = {
+      title: 'Hồ Quý Ly',
+      type: 'person' as WikiPageType,
+      era: 'ho-dynasty' as Era,
+      tags: ['vua', 'cải cách'],
+      sources: ['https://vi.wikipedia.org/wiki/Hồ_Quý_Ly'],
+    };
+    expect(validateFrontmatter(fm)).toEqual({ valid: true, errors: [] });
+  });
+
+  it('should accept valid mac-dynasty frontmatter', () => {
+    const fm = {
+      title: 'Mạc Đăng Dung',
+      type: 'person' as WikiPageType,
+      era: 'mac-dynasty' as Era,
+      tags: ['vua', 'sáng lập'],
+      sources: ['https://vi.wikipedia.org/wiki/Mạc_Đăng_Dung'],
+    };
+    expect(validateFrontmatter(fm)).toEqual({ valid: true, errors: [] });
+  });
+
   it('should reject invalid type', () => {
     const fm = { title: 'Test', type: 'invalid', era: 'prehistoric', tags: [], sources: [] };
     const result = validateFrontmatter(fm as any);

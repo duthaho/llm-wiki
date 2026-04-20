@@ -6,7 +6,9 @@ export type Era =
   | 'ngo-dinh'
   | 'ly-dynasty'
   | 'tran-dynasty'
+  | 'ho-dynasty'
   | 'le-dynasty'
+  | 'mac-dynasty'
   | 'nguyen-dynasty'
   | 'french-colonization'
   | 'independence-wars'
@@ -28,7 +30,7 @@ export interface ValidationResult {
 const VALID_TYPES: WikiPageType[] = ['person', 'event', 'era', 'place', 'concept', 'dynasty'];
 export const VALID_ERAS: Era[] = [
   'prehistoric', 'chinese-domination', 'ngo-dinh', 'ly-dynasty',
-  'tran-dynasty', 'le-dynasty', 'nguyen-dynasty',
+  'tran-dynasty', 'ho-dynasty', 'le-dynasty', 'mac-dynasty', 'nguyen-dynasty',
   'french-colonization', 'independence-wars', 'reunification-doi-moi',
 ];
 
