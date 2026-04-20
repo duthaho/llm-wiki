@@ -16,8 +16,11 @@ export function findUnresolvedLinks(pages: Array<{ path: string; raw: string }>)
 
   for (const page of pages) {
     const { content } = matter(page.raw);
+    // Only extract links from ## Liên quan section
+    const lienQuanMatch = content.match(/## Liên quan\s*\n([\s\S]*?)(?=\n## |\n---|\s*$)/);
+    const section = lienQuanMatch ? lienQuanMatch[1] : '';
     let match;
-    while ((match = linkRegex.exec(content)) !== null) {
+    while ((match = linkRegex.exec(section)) !== null) {
       const linkTitle = match[1];
       const normalized = linkTitle.toLowerCase().replace(/\s+/g, '-');
       if (!existingTitles.has(normalized)) {

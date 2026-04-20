@@ -1,18 +1,18 @@
 import { Command } from 'commander';
-import { fetchArticle } from './fetcher/wiki-api.js';
-import { getArticlesByEra } from './fetcher/article-list.js';
-import { RawStore } from './fetcher/raw-store.js';
-import { ingestArticle, ingestDiscoveredArticle, parseWikiPage, normalizePage } from './ingester/ingester.js';
-import { WikiManager } from './wiki/wiki-manager.js';
-import { queryWiki } from './query/query-engine.js';
-import { VALID_ERAS } from './schema/schema.js';
-import { buildGraphFile } from './graph/build-graph.js';
-import { findUnresolvedLinks } from './linker/link-resolver.js';
-import { createLLMClient, DEFAULT_MODELS } from './llm/index.js';
-import type { LLMProvider } from './llm/index.js';
+import { globSync } from 'glob';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { globSync } from 'glob';
+import { getArticlesByEra } from './fetcher/article-list.js';
+import { RawStore } from './fetcher/raw-store.js';
+import { fetchArticle } from './fetcher/wiki-api.js';
+import { buildGraphFile } from './graph/build-graph.js';
+import { ingestArticle, ingestDiscoveredArticle, normalizePage, parseWikiPage } from './ingester/ingester.js';
+import { findUnresolvedLinks } from './linker/link-resolver.js';
+import type { LLMProvider } from './llm/index.js';
+import { createLLMClient, DEFAULT_MODELS } from './llm/index.js';
+import { queryWiki } from './query/query-engine.js';
+import { VALID_ERAS } from './schema/schema.js';
+import { WikiManager } from './wiki/wiki-manager.js';
 
 const VALID_PROVIDERS: LLMProvider[] = ['anthropic', 'nvidia'];
 
@@ -236,6 +236,20 @@ program
         console.log(`[${i + 1}/${unresolved.length}] ${linkTitle}`);
 
         try {
+          // Check if wiki page already exists
+          const slug = linkTitle.toLowerCase().replace(/\s+/g, '-');
+          const existingCategories = ['persons', 'events', 'eras', 'places', 'concepts'];
+          let alreadyExists = false;
+          for (const cat of existingCategories) {
+            const existing = await wiki.loadPage(cat, slug);
+            if (existing) {
+              console.log(`  -> Wiki: already exists (${cat}/${slug}.md), skipping`);
+              alreadyExists = true;
+              break;
+            }
+          }
+          if (alreadyExists) continue;
+
           // Fetch from Wikipedia
           if (await rawStore.exists('discovered', wikiTitle)) {
             console.log('  -> Raw: cached');
@@ -257,7 +271,6 @@ program
           // Parse the generated page to determine category
           const parsed = parseWikiPage(wikiPage);
           const type = parsed.frontmatter.type || 'concept';
-          const slug = linkTitle.toLowerCase().replace(/\s+/g, '-');
           const category = type === 'dynasty' ? 'eras' : `${type}s`;
 
           await wiki.savePage(category, slug, wikiPage);
