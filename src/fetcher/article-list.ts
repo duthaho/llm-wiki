@@ -115,7 +115,7 @@ const ARTICLES: Record<string, ArticleEntry[]> = {
     { title: 'Đại_Việt_sử_ký', wikiTitle: 'Đại Việt sử ký', type: 'concept', era: 'tran-dynasty', tags: ['sử học', 'Lê Văn Hưu'] },
     // Late Trần
     { title: 'Trần_Nghệ_Tông', wikiTitle: 'Trần Nghệ Tông', type: 'person', era: 'tran-dynasty', tags: ['vua', 'suy vong'] },
-    { title: 'Chiến_tranh_Việt–Chiêm_(1069–1471)', wikiTitle: 'Chiến tranh Việt–Chiêm Thành', type: 'event', era: 'tran-dynasty', tags: ['chiến tranh', 'Chiêm Thành', 'nam tiến'] },
+    { title: 'Chiêm_Thành', wikiTitle: 'Chiêm Thành', type: 'concept', era: 'tran-dynasty', tags: ['vương quốc', 'Champa', 'nam tiến'] },
   ],
   'ho-dynasty': [
     // Hồ dynasty (1400–1407)

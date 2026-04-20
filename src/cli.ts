@@ -185,11 +185,12 @@ program
 program
   .command('follow-links')
   .description('Discover and ingest articles referenced by existing wiki pages')
+  .argument('[source]', 'Wiki file or directory to scan (e.g. people/hung-vuong.md, eras/). Defaults to all.')
   .option('--depth <n>', 'How many rounds of link following', '1')
   .option('--provider <provider>', 'LLM provider (anthropic|nvidia)', 'nvidia')
   .option('--model <model>', 'Model to use (defaults per provider)')
   .option('--dry-run', 'Show what would be fetched without ingesting', false)
-  .action(async (opts: { depth: string; provider: string; model?: string; dryRun: boolean }) => {
+  .action(async (source: string | undefined, opts: { depth: string; provider: string; model?: string; dryRun: boolean }) => {
     const provider = opts.provider as LLMProvider;
     const model = opts.model ?? DEFAULT_MODELS[provider];
     const client = createLLMClient(provider);
@@ -200,8 +201,11 @@ program
     for (let round = 1; round <= depth; round++) {
       console.log(`\n--- Round ${round}/${depth} ---\n`);
 
-      // Read all current wiki pages
-      const files = globSync('**/*.md', { cwd: wikiDir });
+      // Read wiki pages (filtered by source if provided)
+      const pattern = source
+        ? (source.endsWith('.md') ? source : `${source.replace(/\/$/, '')}/**/*.md`)
+        : '**/*.md';
+      const files = globSync(pattern, { cwd: wikiDir });
       const pages: Array<{ path: string; raw: string }> = [];
       for (const file of files) {
         const raw = await readFile(join(wikiDir, file), 'utf-8');
