@@ -93,7 +93,7 @@ const ARTICLES: Record<string, ArticleEntry[]> = {
     { title: 'Ỷ_Lan', wikiTitle: 'Ỷ Lan', type: 'person', era: 'ly-dynasty', tags: ['thái hậu', 'nhiếp chính'] },
     // Culture & religion
     { title: 'Văn_Miếu_–_Quốc_Tử_Giám', wikiTitle: 'Văn Miếu – Quốc Tử Giám', type: 'place', era: 'ly-dynasty', tags: ['giáo dục', 'Nho giáo', '1070'] },
-    { title: 'Phật_giáo_thời_Lý', wikiTitle: 'Phật giáo thời Lý', type: 'concept', era: 'ly-dynasty', tags: ['tôn giáo', 'Phật giáo', 'quốc giáo'] },
+    { title: 'Phật_giáo_Việt_Nam', wikiTitle: 'Phật giáo Việt Nam', type: 'concept', era: 'ly-dynasty', tags: ['tôn giáo', 'Phật giáo', 'quốc giáo'] },
     { title: 'Chùa_Một_Cột', wikiTitle: 'Chùa Một Cột', type: 'place', era: 'ly-dynasty', tags: ['kiến trúc', 'Phật giáo', 'Hà Nội'] },
     { title: 'Nam_quốc_sơn_hà', wikiTitle: 'Nam quốc sơn hà', type: 'concept', era: 'ly-dynasty', tags: ['thơ', 'tuyên ngôn', 'độc lập'] },
   ],
