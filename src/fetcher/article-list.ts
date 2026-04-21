@@ -1,4 +1,4 @@
-import type { WikiPageType, Era } from '../schema/schema.js';
+import type { Era, WikiPageType } from '../schema/schema.js';
 
 export interface ArticleEntry {
   title: string;
@@ -235,6 +235,19 @@ const ARTICLES: Record<string, ArticleEntry[]> = {
     { title: 'Hiệp_định_Paris_1973', wikiTitle: 'Hiệp định Paris 1973', type: 'event', era: 'independence-wars', tags: ['1973', 'hòa bình', 'Mỹ rút quân'] },
     { title: 'Chiến_dịch_Hồ_Chí_Minh', wikiTitle: 'Chiến dịch Hồ Chí Minh', type: 'event', era: 'independence-wars', tags: ['1975', 'giải phóng', 'Sài Gòn'] },
     { title: 'Sự_kiện_30_tháng_4_năm_1975', wikiTitle: 'Sự kiện 30 tháng 4 năm 1975', type: 'event', era: 'independence-wars', tags: ['30/4/1975', 'thống nhất', 'kết thúc chiến tranh'] },
+  ],
+  'reunification-doi-moi': [
+    // Reunification & post-war struggles (1975-1986)
+    { title: 'Thống_nhất_Việt_Nam', wikiTitle: 'Thống nhất Việt Nam', type: 'event', era: 'reunification-doi-moi', tags: ['1976', 'tổng tuyển cử', 'Bắc Nam'] },
+    { title: 'Thời_bao_cấp', wikiTitle: 'Thời bao cấp', type: 'concept', era: 'reunification-doi-moi', tags: ['kinh tế kế hoạch', '1976-1986', 'tem phiếu'] },
+    // Đổi Mới reform (1986)
+    { title: 'Đổi_Mới', wikiTitle: 'Đổi Mới', type: 'concept', era: 'reunification-doi-moi', tags: ['1986', 'cải cách', 'kinh tế thị trường'] },
+    { title: 'Nguyễn_Văn_Linh', wikiTitle: 'Nguyễn Văn Linh', type: 'person', era: 'reunification-doi-moi', tags: ['tổng bí thư', 'Đổi Mới', 'khởi xướng'] },
+    { title: 'Võ_Văn_Kiệt', wikiTitle: 'Võ Văn Kiệt', type: 'person', era: 'reunification-doi-moi', tags: ['thủ tướng', 'cải cách', 'đường dây 500kV'] },
+    { title: 'Đỗ_Mười', wikiTitle: 'Đỗ Mười', type: 'person', era: 'reunification-doi-moi', tags: ['tổng bí thư', 'Đổi Mới', 'lãnh đạo'] },
+    { title: 'Lê_Khả_Phiêu', wikiTitle: 'Lê Khả Phiêu', type: 'person', era: 'reunification-doi-moi', tags: ['tổng bí thư', '1997-2001'] },
+    { title: 'Nông_Đức_Mạnh', wikiTitle: 'Nông Đức Mạnh', type: 'person', era: 'reunification-doi-moi', tags: ['tổng bí thư', '2001-2011'] },
+    { title: 'Nguyễn_Phú_Trọng', wikiTitle: 'Nguyễn Phú Trọng', type: 'person', era: 'reunification-doi-moi', tags: ['tổng bí thư', 'đốt lò', 'lâu năm'] },
   ],
 };
 

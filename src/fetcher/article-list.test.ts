@@ -64,6 +64,12 @@ describe('getArticlesByEra', () => {
     expect(articles.every(a => a.era === 'independence-wars')).toBe(true);
   });
 
+  it('should have articles for reunification-doi-moi era', () => {
+    const articles = getArticlesByEra('reunification-doi-moi');
+    expect(articles.length).toBeGreaterThan(0);
+    expect(articles.every(a => a.era === 'reunification-doi-moi')).toBe(true);
+  });
+
   it('should return empty array for unknown era', () => {
     const articles = getArticlesByEra('unknown' as any);
     expect(articles).toEqual([]);
