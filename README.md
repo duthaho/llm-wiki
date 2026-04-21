@@ -30,13 +30,18 @@ npm install
 ### Set up your API key
 
 ```bash
+# Anthropic (default)
 export ANTHROPIC_API_KEY="sk-ant-..."
+
+# Or NVIDIA NIM
+export NVIDIA_API_KEY="nvapi-..."
 ```
 
 ### Ingest your first era
 
 ```bash
 npx tsx src/cli.ts ingest prehistoric
+npx tsx src/cli.ts ingest prehistoric --provider anthropic
 ```
 
 ### Explore
@@ -54,18 +59,39 @@ Open `dist/graph.html` in a browser to explore the knowledge graph.
 | Command | Description |
 |---------|-------------|
 | `vn-wiki ingest <era>` | Fetch Wikipedia articles for an era and compile into wiki pages |
-| `vn-wiki follow-links --depth N` | Discover and ingest articles referenced by existing pages |
+| `vn-wiki follow-links [source]` | Discover and ingest articles referenced by existing pages |
 | `vn-wiki query "<question>"` | Ask a question about Vietnamese history |
 | `vn-wiki list` | List all wiki pages |
+| `vn-wiki normalize` | Fix malformed frontmatter in all wiki pages |
 | `vn-wiki build-graph` | Generate interactive graph visualization (`dist/graph.html`) |
+
+### Examples
+
+```bash
+# Ingest an era
+vn-wiki ingest ngo-dinh
+vn-wiki ingest ly-dynasty --skip-existing
+
+# Follow links from all pages
+vn-wiki follow-links
+
+# Follow links from a single page or directory
+vn-wiki follow-links people/hung-vuong.md
+vn-wiki follow-links eras/
+
+# Dry run to see what would be fetched
+vn-wiki follow-links eras/ --dry-run --depth 2
+```
 
 ### Common options
 
 | Option | Commands | Description |
 |--------|----------|-------------|
-| `--model <model>` | `ingest`, `query`, `follow-links` | Claude model to use (default: `claude-sonnet-4-6`) |
+| `--provider <provider>` | `ingest`, `query`, `follow-links` | LLM provider: `anthropic` or `nvidia` (default: `nvidia`) |
+| `--model <model>` | `ingest`, `query`, `follow-links` | Model to use (defaults per provider) |
 | `--skip-existing` | `ingest` | Skip articles that already have wiki pages |
-| `--dry-run` | `follow-links` | Show what would be fetched without ingesting |
+| `--depth <n>` | `follow-links` | How many rounds of link following (default: `1`) |
+| `--dry-run` | `follow-links`, `normalize` | Show what would change without writing |
 | `-o, --output <path>` | `build-graph` | Output HTML file path (default: `dist/graph.html`) |
 
 ## Architecture
@@ -114,16 +140,20 @@ Pages are stored under `wiki/` organized by type: `persons/`, `events/`, `eras/`
 
 ## Era Coverage
 
-| Era | Status | Articles |
-|-----|--------|----------|
-| Prehistoric & Hung Kings | Done | 16 articles, 15 wiki pages |
-| Chinese domination | Planned | -- |
-| Independent dynasties (Ngo - Nguyen) | Planned | -- |
-| French colonization | Planned | -- |
-| Independence & wars | Planned | -- |
-| Reunification & Doi Moi | Planned | -- |
-
-Valid era identifiers: `prehistoric`, `chinese-domination`, `ngo-dinh`, `ly-dynasty`, `tran-dynasty`, `le-dynasty`, `nguyen-dynasty`, `french-colonization`, `independence-wars`, `reunification-doi-moi`
+| Era | Key | Status | Articles |
+|-----|-----|--------|----------|
+| Prehistoric & Hung Kings | `prehistoric` | Done | 16 |
+| Chinese domination | `chinese-domination` | Done | 22 |
+| Ngo, Dinh, Tien Le | `ngo-dinh` | Done | 13 |
+| Ly dynasty | `ly-dynasty` | Done | 14 |
+| Tran dynasty | `tran-dynasty` | Done | 13 |
+| Ho dynasty & Ming domination | `ho-dynasty` | Done | 6 |
+| Le dynasty (Le so, Le trung hung, Tay Son) | `le-dynasty` | Done | 16 |
+| Mac dynasty | `mac-dynasty` | Done | 5 |
+| Nguyen dynasty | `nguyen-dynasty` | Done | 12 |
+| French colonization | `french-colonization` | Planned | -- |
+| Independence & wars | `independence-wars` | Planned | -- |
+| Reunification & Doi Moi | `reunification-doi-moi` | Planned | -- |
 
 ## Development
 
@@ -144,7 +174,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding new eras, runnin
 
 ## Built With
 
-- [Anthropic Claude API](https://docs.anthropic.com/) -- LLM compilation and query answering
+- [Anthropic Claude API](https://docs.anthropic.com/) / [NVIDIA NIM](https://build.nvidia.com/) -- LLM compilation and query answering
 - [Commander.js](https://github.com/tj/commander.js) -- CLI framework
 - [D3.js](https://d3js.org/) -- Graph visualization
 - [gray-matter](https://github.com/jonschlinkert/gray-matter) -- YAML frontmatter parsing
