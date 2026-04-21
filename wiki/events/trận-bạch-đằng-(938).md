@@ -29,5 +29,4 @@ Chiến thắng Bạch Đằng năm 938 có ý nghĩa lịch sử trọng đại
 - [[Lưu Hoằng Tháo]]
 - [[Kiều Công Tiễn]]
 - [[Dương Đình Nghệ]]
-- Trận Bạch Đằng (1288)
 - [[Nhà Ngô]]

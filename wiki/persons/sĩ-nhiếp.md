@@ -32,9 +32,6 @@ Sĩ Nhiếp được đánh giá là một nhà cai trị tài ba, biết "lấy
 
 ## Liên quan
 - [[Giao Châu]]
-- [[Đông Hán]]
-- [[Tam Quốc]]
-- [[Đông Ngô]]
 - [[Luy Lâu]]
 - [[Đại Việt sử ký toàn thư]]
 - [[Nho giáo]]

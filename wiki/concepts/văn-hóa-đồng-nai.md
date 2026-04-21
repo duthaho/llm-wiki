@@ -46,7 +46,4 @@ Văn hóa Đồng Nai được xem là một nền văn minh tiền sử rực r
 - [[Bảo tàng Đồng Nai]]
 - [[Thời đại đồ đồng]]
 - [[Thời đại đồ sắt]]
-- [[Đông Nam Bộ]]
-- [[Sông Đồng Nai]]
-- [[Biên Hòa]]
 - [[Dốc Chùa]]

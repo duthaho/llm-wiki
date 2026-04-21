@@ -34,5 +34,4 @@ Văn Miếu – Quốc Tử Giám có giá trị đặc biệt về mặt lịch
 - [[Lê Thánh Tông]]
 - [[Chu Văn An]]
 - [[Nho giáo]]
-- [[Thăng Long - Hà Nội]]
 - [[Bia Tiến sĩ]]

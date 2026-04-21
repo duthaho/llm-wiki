@@ -31,4 +31,3 @@ Mặc dù chỉ tồn tại trong 7 năm ngắn ngủi, quốc hiệu Đại Ngu
 - [[Nhà Hồ]]
 - [[Đại Việt]]
 - [[Hồ Hán Thương]]
-- [[Lịch sử Việt Nam thời kỳ Bắc thuộc lần 4]]

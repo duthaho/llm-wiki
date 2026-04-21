@@ -33,7 +33,6 @@ Mai Hắc Đế được xem là một vị anh hùng dân tộc, biểu tượn
 
 ## Liên quan
 - [[Khởi nghĩa Hoan Châu]]
-- [[Nhà Đường]]
 - [[An Nam Đô hộ phủ]]
 - [[Lâm Ấp]]
 - [[Chân Lạp]]

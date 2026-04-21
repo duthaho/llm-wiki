@@ -29,4 +29,3 @@ Thành Cổ Loa là bằng chứng xác thực về sự sáng tạo độc đá
 - [[Âu Lạc]]
 - [[Ngô Quyền]]
 - [[Văn hóa Đông Sơn]]
-- [[Sông Hồng]]

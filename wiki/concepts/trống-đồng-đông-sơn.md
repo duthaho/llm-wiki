@@ -82,8 +82,4 @@ Cho đến nay, [[Bảo tàng Lịch sử Việt Nam]] tại Hà Nội sở hữ
 - [[Trống Hoàng Hạ]]
 - [[Trống Sông Đà]]
 - [[Hai Bà Trưng]]
-- [[Mã Viện]]
 - [[Bảo tàng Lịch sử Việt Nam]]
-- [[Franz Heger]]
-- [[Hệ thống phân loại trống]]
-- [[Danh sách một số trống đồng Đông Sơn nổi tiếng]]

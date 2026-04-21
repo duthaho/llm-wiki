@@ -46,5 +46,3 @@ Văn hóa Sa Huỳnh là một trong ba nền văn hóa cổ đại định hìn
 - [[Khu di chỉ văn hóa Sa Huỳnh]]
 - [[Bảo tàng Văn hóa Sa Huỳnh]]
 - [[Lễ hội Katê]]
-- [[Hội An]]
-- [[Quảng Ngãi]]

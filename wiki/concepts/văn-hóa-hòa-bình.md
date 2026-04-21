@@ -55,13 +55,7 @@ Nhà nghiên cứu [[Stephen Oppenheimer]] còn đề xuất rằng văn minh Đ
 Tuy nhiên, cần lưu ý rằng các nghiên cứu sinh học phân tử hiện đại ủng hộ thuyết [[Out-of-Africa]], xác định loài người hình thành từ [[Châu Phi]] và phát tán ra khắp thế giới. Nghiên cứu về gen người Việt gần đây cho thấy tổ tiên người Việt có thể đã di cư từ châu Phi khoảng 200.000 năm trước, đến cư trú tại Việt Nam khoảng 40.000–60.000 năm trước, sau đó tiếp tục di cư lên các nước Đông Á.
 
 ## Liên quan
-- [[Madeleine Colani]]
 - [[Văn hóa Bắc Sơn]]
 - [[Di chỉ Mái Đá Ngườm]]
 - [[Thời đại đồ đá mới]]
 - [[Thời đại đồ đá cũ]]
-- [[Sundaland]]
-- [[Wilhelm G. Solheim II]]
-- [[Stephen Oppenheimer]]
-- [[Tỉnh Hòa Bình]]
-- [[Khảo cổ học Việt Nam]]

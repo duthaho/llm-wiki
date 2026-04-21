@@ -30,7 +30,6 @@ Chiến thắng Như Nguyệt đã buộc nhà Tống phải chấp nhận giả
 - [[Lý Thường Kiệt]]
 - [[Nhà Lý]]
 - [[Chiến tranh Tống-Việt, 1075-1077]]
-- [[Sông Cầu]]
 - [[Quách Quỳ]]
 - [[Triệu Tiết]]
 - [[Hoằng Chân]]

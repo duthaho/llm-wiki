@@ -66,5 +66,3 @@ Văn hóa Phùng Nguyên đánh dấu một bước ngoặt quan trọng trong l
 - [[Di chỉ Đồng Đậu]]
 - [[Thời đại đồ đồng]]
 - [[Nhà nước Văn Lang]]
-- [[Huyện Lâm Thao]]
-- [[Tỉnh Phú Thọ]]

@@ -26,7 +26,6 @@ Về mặt hành chính, Thăng Long bao gồm Hoàng thành và phủ Phụng T
 Thăng Long là biểu tượng của nền văn hiến Việt Nam, được nhắc đến qua cụm từ "Thăng Long ngàn năm văn vật". Năm 2010, Việt Nam đã tổ chức Đại lễ kỷ niệm 1000 năm Thăng Long - Hà Nội. Từ năm 2002, các cuộc khai quật khảo cổ học tại khu vực Hoàng thành Thăng Long (giữa các phố Hoàng Diệu, Hoàng Văn Thụ, Độc Lập, Bắc Sơn) đã phát lộ một phức hệ di tích - di vật phong phú từ thời [[Đại La]] đến thành [[Hà Nội]], khẳng định giá trị lịch sử liên tục của vùng đất này. Những dấu tích còn lại như rồng đá ở điện Kính Thiên là minh chứng quan trọng cho quá trình phát triển lâu dài của kinh đô cổ.
 
 ## Liên quan
-- [[Hà Nội]]
 - [[Hoàng thành Thăng Long]]
 - [[Lý Công Uẩn]]
 - [[Đại Việt]]

@@ -153,7 +153,7 @@ const ARTICLES: Record<string, ArticleEntry[]> = {
     { title: 'Mạc_Đăng_Dung', wikiTitle: 'Mạc Đăng Dung', type: 'person', era: 'mac-dynasty', tags: ['vua', 'soán ngôi', 'sáng lập'] },
     { title: 'Mạc_Đăng_Doanh', wikiTitle: 'Mạc Đăng Doanh', type: 'person', era: 'mac-dynasty', tags: ['vua', 'thịnh trị'] },
     { title: 'Chiến_tranh_Lê–Mạc', wikiTitle: 'Chiến tranh Lê–Mạc', type: 'event', era: 'mac-dynasty', tags: ['nội chiến', 'Nam-Bắc triều', '1533-1592'] },
-    { title: 'Vương_triều_Mạc_ở_Cao_Bằng', wikiTitle: 'Vương triều Mạc ở Cao Bằng', type: 'era', era: 'mac-dynasty', tags: ['Mạc', 'Cao Bằng', '1592-1677'] },
+    { title: 'Mạc_Kính_Cung', wikiTitle: 'Mạc Kính Cung', type: 'person', era: 'mac-dynasty', tags: ['vua', 'Cao Bằng', '1593-1625'] },
   ],
   'nguyen-dynasty': [
     // Dynasty overview
@@ -169,10 +169,72 @@ const ARTICLES: Record<string, ArticleEntry[]> = {
     { title: 'Đại_Nam_thực_lục', wikiTitle: 'Đại Nam thực lục', type: 'concept', era: 'nguyen-dynasty', tags: ['sử học', 'biên niên', 'Nhà Nguyễn'] },
     // Territory & administration
     { title: 'Nam_tiến', wikiTitle: 'Nam tiến', type: 'concept', era: 'nguyen-dynasty', tags: ['mở rộng', 'lãnh thổ', 'phương Nam'] },
-    { title: 'Lăng_tẩm_vua_Nguyễn', wikiTitle: 'Lăng tẩm vua Nguyễn', type: 'place', era: 'nguyen-dynasty', tags: ['kiến trúc', 'Huế', 'di sản'] },
+    { title: 'Lăng_tẩm_Huế', wikiTitle: 'Lăng tẩm Huế', type: 'place', era: 'nguyen-dynasty', tags: ['kiến trúc', 'Huế', 'di sản'] },
     // Key events
     { title: 'Phong_trào_Cần_Vương', wikiTitle: 'Phong trào Cần Vương', type: 'event', era: 'nguyen-dynasty', tags: ['kháng Pháp', '1885-1896'] },
     { title: 'Trương_Định', wikiTitle: 'Trương Định', type: 'person', era: 'nguyen-dynasty', tags: ['kháng Pháp', 'Nam Kỳ', 'bình tây'] },
+  ],
+  'french-colonization': [
+    // Era overview & colonial structure
+    { title: 'Pháp_thuộc', wikiTitle: 'Pháp thuộc', type: 'era', era: 'french-colonization', tags: ['thuộc địa', '1858-1945'] },
+    { title: 'Liên_bang_Đông_Dương', wikiTitle: 'Liên bang Đông Dương', type: 'concept', era: 'french-colonization', tags: ['hành chính', 'thuộc địa Pháp'] },
+    { title: 'Hòa_ước_Giáp_Thân_(1884)', wikiTitle: 'Hòa ước Giáp Thân (1884)', type: 'event', era: 'french-colonization', tags: ['Patenôtre', 'bảo hộ', 'hiệp ước'] },
+    // Late Nguyễn emperors under French rule
+    { title: 'Hàm_Nghi', wikiTitle: 'Hàm Nghi', type: 'person', era: 'french-colonization', tags: ['vua', 'lưu vong', 'Cần Vương'] },
+    { title: 'Bảo_Đại', wikiTitle: 'Bảo Đại', type: 'person', era: 'french-colonization', tags: ['vua', 'cuối cùng', 'thoái vị'] },
+    // Armed resistance (late 19c – early 20c)
+    { title: 'Phan_Đình_Phùng', wikiTitle: 'Phan Đình Phùng', type: 'person', era: 'french-colonization', tags: ['Cần Vương', 'Hương Khê', 'kháng Pháp'] },
+    { title: 'Hoàng_Hoa_Thám', wikiTitle: 'Hoàng Hoa Thám', type: 'person', era: 'french-colonization', tags: ['Đề Thám', 'Yên Thế', 'kháng Pháp'] },
+    // Early-20c reform & revolutionary movements
+    { title: 'Phan_Bội_Châu', wikiTitle: 'Phan Bội Châu', type: 'person', era: 'french-colonization', tags: ['cách mạng', 'Đông Du', 'nhà nho'] },
+    { title: 'Phan_Châu_Trinh', wikiTitle: 'Phan Châu Trinh', type: 'person', era: 'french-colonization', tags: ['canh tân', 'Duy Tân', 'nhà nho'] },
+    { title: 'Phong_trào_Đông_Du', wikiTitle: 'Phong trào Đông Du', type: 'event', era: 'french-colonization', tags: ['Phan Bội Châu', 'du học Nhật', '1905-1909'] },
+    { title: 'Đông_Kinh_Nghĩa_Thục', wikiTitle: 'Đông Kinh Nghĩa Thục', type: 'concept', era: 'french-colonization', tags: ['giáo dục', 'canh tân', '1907'] },
+    // Nationalist & communist organizations
+    { title: 'Việt_Nam_Quốc_dân_Đảng', wikiTitle: 'Việt Nam Quốc dân Đảng', type: 'concept', era: 'french-colonization', tags: ['đảng phái', 'dân tộc chủ nghĩa'] },
+    { title: 'Nguyễn_Thái_Học', wikiTitle: 'Nguyễn Thái Học', type: 'person', era: 'french-colonization', tags: ['VNQDĐ', 'Yên Bái', 'liệt sĩ'] },
+    { title: 'Khởi_nghĩa_Yên_Bái', wikiTitle: 'Khởi nghĩa Yên Bái', type: 'event', era: 'french-colonization', tags: ['VNQDĐ', '1930', 'khởi nghĩa'] },
+    { title: 'Hồ_Chí_Minh', wikiTitle: 'Hồ Chí Minh', type: 'person', era: 'french-colonization', tags: ['Nguyễn Ái Quốc', 'cách mạng', 'lãnh tụ'] },
+    { title: 'Đảng_Cộng_sản_Việt_Nam', wikiTitle: 'Đảng Cộng sản Việt Nam', type: 'concept', era: 'french-colonization', tags: ['đảng phái', 'thành lập 1930'] },
+    { title: 'Xô_viết_Nghệ_Tĩnh', wikiTitle: 'Xô viết Nghệ Tĩnh', type: 'event', era: 'french-colonization', tags: ['khởi nghĩa', 'Nghệ An', 'Hà Tĩnh', '1930-1931'] },
+    { title: 'Việt_Minh', wikiTitle: 'Việt Minh', type: 'concept', era: 'french-colonization', tags: ['mặt trận', '1941', 'giải phóng dân tộc'] },
+    // End of colonial era (1945)
+    { title: 'Nhật_đảo_chính_Pháp', wikiTitle: 'Nhật đảo chính Pháp', type: 'event', era: 'french-colonization', tags: ['9/3/1945', 'Nhật Bản', 'Đông Dương'] },
+    { title: 'Nạn_đói_năm_Ất_Dậu,_1944–1945', wikiTitle: 'Nạn đói năm Ất Dậu, 1944–1945', type: 'event', era: 'french-colonization', tags: ['nạn đói', 'Bắc Kỳ', '2 triệu người'] },
+    { title: 'Cách_mạng_Tháng_Tám', wikiTitle: 'Cách mạng Tháng Tám', type: 'event', era: 'french-colonization', tags: ['1945', 'khởi nghĩa', 'Việt Minh'] },
+    { title: 'Tuyên_ngôn_độc_lập_(Việt_Nam_Dân_chủ_Cộng_hòa)', wikiTitle: 'Tuyên ngôn độc lập (Việt Nam Dân chủ Cộng hòa)', type: 'event', era: 'french-colonization', tags: ['2/9/1945', 'Hồ Chí Minh', 'khai sinh'] },
+  ],
+  'independence-wars': [
+    // First Indochina War (1945-1954)
+    { title: 'Chiến_tranh_Đông_Dương', wikiTitle: 'Chiến tranh Đông Dương', type: 'event', era: 'independence-wars', tags: ['kháng chiến', 'chống Pháp', '1946-1954'] },
+    { title: 'Việt_Nam_Dân_chủ_Cộng_hòa', wikiTitle: 'Việt Nam Dân chủ Cộng hòa', type: 'concept', era: 'independence-wars', tags: ['nhà nước', 'miền Bắc', '1945-1976'] },
+    { title: 'Toàn_quốc_kháng_chiến', wikiTitle: 'Toàn quốc kháng chiến', type: 'event', era: 'independence-wars', tags: ['19/12/1946', 'Hà Nội', 'khởi đầu kháng Pháp'] },
+    { title: 'Chiến_dịch_Biên_giới', wikiTitle: 'Chiến dịch Biên giới', type: 'event', era: 'independence-wars', tags: ['1950', 'Việt Bắc', 'chiến dịch'] },
+    { title: 'Chiến_dịch_Điện_Biên_Phủ', wikiTitle: 'Chiến dịch Điện Biên Phủ', type: 'event', era: 'independence-wars', tags: ['1954', 'quyết định', 'chấn động địa cầu'] },
+    { title: 'Võ_Nguyên_Giáp', wikiTitle: 'Võ Nguyên Giáp', type: 'person', era: 'independence-wars', tags: ['đại tướng', 'Điện Biên Phủ', 'quân sự'] },
+    { title: 'Hiệp_định_Genève,_1954', wikiTitle: 'Hiệp định Genève, 1954', type: 'event', era: 'independence-wars', tags: ['1954', 'chia đôi', 'hiệp định'] },
+    // Partition (1954-1960)
+    { title: 'Việt_Nam_Cộng_hòa', wikiTitle: 'Việt Nam Cộng hòa', type: 'concept', era: 'independence-wars', tags: ['nhà nước', 'miền Nam', '1955-1975'] },
+    { title: 'Ngô_Đình_Diệm', wikiTitle: 'Ngô Đình Diệm', type: 'person', era: 'independence-wars', tags: ['tổng thống', 'VNCH', 'bị ám sát'] },
+    { title: 'Tập_kết_ra_Bắc', wikiTitle: 'Tập kết ra Bắc', type: 'event', era: 'independence-wars', tags: ['1954', 'di cư', 'Hiệp định Genève'] },
+    { title: 'Vĩ_tuyến_17_Bắc', wikiTitle: 'Vĩ tuyến 17 Bắc', type: 'place', era: 'independence-wars', tags: ['giới tuyến', 'chia cắt', 'Bến Hải'] },
+    // Vietnam War (1955-1973)
+    { title: 'Chiến_tranh_Việt_Nam', wikiTitle: 'Chiến tranh Việt Nam', type: 'event', era: 'independence-wars', tags: ['1955-1975', 'chống Mỹ', 'nội chiến'] },
+    { title: 'Mặt_trận_Dân_tộc_Giải_phóng_miền_Nam_Việt_Nam', wikiTitle: 'Mặt trận Dân tộc Giải phóng miền Nam Việt Nam', type: 'concept', era: 'independence-wars', tags: ['Việt Cộng', '1960', 'mặt trận'] },
+    { title: 'Đường_Trường_Sơn', wikiTitle: 'Đường Trường Sơn', type: 'place', era: 'independence-wars', tags: ['hậu cần', 'đường mòn Hồ Chí Minh', 'tiếp vận'] },
+    { title: 'Sự_kiện_Vịnh_Bắc_Bộ', wikiTitle: 'Sự kiện Vịnh Bắc Bộ', type: 'event', era: 'independence-wars', tags: ['1964', 'Mỹ leo thang', 'cớ chiến tranh'] },
+    { title: 'Sự_kiện_Tết_Mậu_Thân', wikiTitle: 'Sự kiện Tết Mậu Thân', type: 'event', era: 'independence-wars', tags: ['1968', 'tổng tiến công', 'Sài Gòn'] },
+    // Leaders of the period
+    { title: 'Lê_Duẩn', wikiTitle: 'Lê Duẩn', type: 'person', era: 'independence-wars', tags: ['tổng bí thư', 'ĐCSVN', 'lãnh đạo'] },
+    { title: 'Phạm_Văn_Đồng', wikiTitle: 'Phạm Văn Đồng', type: 'person', era: 'independence-wars', tags: ['thủ tướng', 'VNDCCH', 'lãnh đạo'] },
+    { title: 'Trường_Chinh', wikiTitle: 'Trường Chinh', type: 'person', era: 'independence-wars', tags: ['tổng bí thư', 'lý luận', 'ĐCSVN'] },
+    { title: 'Lê_Đức_Thọ', wikiTitle: 'Lê Đức Thọ', type: 'person', era: 'independence-wars', tags: ['Hiệp định Paris', 'đàm phán', 'Nobel'] },
+    { title: 'Nguyễn_Văn_Thiệu', wikiTitle: 'Nguyễn Văn Thiệu', type: 'person', era: 'independence-wars', tags: ['tổng thống', 'VNCH', '1967-1975'] },
+    // Endgame (1972-1975)
+    { title: 'Chiến_dịch_Linebacker_II', wikiTitle: 'Chiến dịch Linebacker II', type: 'event', era: 'independence-wars', tags: ['12/1972', 'Điện Biên Phủ trên không', 'B-52'] },
+    { title: 'Hiệp_định_Paris_1973', wikiTitle: 'Hiệp định Paris 1973', type: 'event', era: 'independence-wars', tags: ['1973', 'hòa bình', 'Mỹ rút quân'] },
+    { title: 'Chiến_dịch_Hồ_Chí_Minh', wikiTitle: 'Chiến dịch Hồ Chí Minh', type: 'event', era: 'independence-wars', tags: ['1975', 'giải phóng', 'Sài Gòn'] },
+    { title: 'Sự_kiện_30_tháng_4_năm_1975', wikiTitle: 'Sự kiện 30 tháng 4 năm 1975', type: 'event', era: 'independence-wars', tags: ['30/4/1975', 'thống nhất', 'kết thúc chiến tranh'] },
   ],
 };
 

@@ -35,8 +35,6 @@ Chiến tranh Tần – Việt được coi là cuộc đụng độ lịch sử
 Mặc dù nhà Tần mở rộng được lãnh thổ xuống phía nam, nhưng sự suy sụp nhanh chóng của nhà Tần và sự trỗi dậy của các thế lực bản địa như Âu Lạc và Nam Việt đã làm chậm lại quá trình xâm lược trực tiếp của các triều đại phong kiến phương Bắc đối với vùng đất Việt Nam cho đến khi nhà Hán thôn tính Nam Việt năm 111 TCN.
 
 ## Liên quan
-- [[Nhà Tần]]
-- [[Tần Thủy Hoàng]]
 - [[Thục Phán]]
 - [[Âu Lạc]]
 - [[Triệu Đà]]

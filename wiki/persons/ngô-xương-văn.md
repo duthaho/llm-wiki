@@ -36,4 +36,3 @@ Ngô Xương Văn là vị vua có công lớn trong việc duy trì sự tồn 
 - [[Dương Tam Kha]]
 - [[Loạn 12 sứ quân]]
 - [[Đinh Bộ Lĩnh]]
-- [[Nhà Ngô]]

@@ -32,4 +32,3 @@ Mặc dù đơn vị hành chính An Nam đô hộ phủ chỉ tồn tại đế
 - [[Cao Biền]]
 - [[Mai Thúc Loan]]
 - [[Phùng Hưng]]
-- [[Nhà Đường]]

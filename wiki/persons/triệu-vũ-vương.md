@@ -40,6 +40,4 @@ Dù vậy, dấu ấn của Triệu Đà vẫn hiện hữu qua nhiều di tích
 - [[Nam Việt]]
 - [[Nhà Triệu]]
 - [[Trọng Thủy]]
-- [[Nhà Tần]]
-- [[Nhà Hán]]
 - [[Lục Giả]]

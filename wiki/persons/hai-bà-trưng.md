@@ -34,7 +34,6 @@ Hai Bà Trưng được tôn vinh là những vị vua đầu tiên trong lịch
 ## Liên quan
 - [[Khởi nghĩa Hai Bà Trưng]]
 - [[Mã Viện]]
-- [[Nhà Đông Hán]]
 - [[Mê Linh]]
 - [[Bắc thuộc lần 2]]
 - [[Thi Sách]]

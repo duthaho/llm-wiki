@@ -34,6 +34,3 @@ Thành nhà Hồ là minh chứng xuất sắc cho kỹ thuật xây dựng và 
 - [[Hồ Quý Ly]]
 - [[Nhà Hồ]]
 - [[Nhà Trần]]
-- [[Thanh Hóa]]
-- [[Vĩnh Lộc]]
-- [[Di sản thế giới tại Việt Nam]]

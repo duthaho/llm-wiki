@@ -35,4 +35,3 @@ Chiến thắng của [[Khởi nghĩa Lam Sơn]] đã chấm dứt hoàn toàn t
 - [[Trận Tốt Động – Chúc Động]]
 - [[Trận Chi Lăng – Xương Giang]]
 - [[Bình Ngô đại cáo]]
-- [[Nhà Minh]]

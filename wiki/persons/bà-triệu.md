@@ -35,8 +35,6 @@ Truyền thuyết và các ghi chép còn lưu giữ hình ảnh oai phong của
 ## Liên quan
 - [[Hai Bà Trưng]]
 - [[Khởi nghĩa Bà Triệu]]
-- [[Nhà Đông Ngô]]
 - [[Lục Dận]]
 - [[Triệu Quốc Đạt]]
-- [[Thanh Hóa]]
 - [[Núi Nưa]]

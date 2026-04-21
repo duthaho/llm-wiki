@@ -45,8 +45,6 @@ Mâu thuẫn gay gắt dẫn đến nhiều cuộc khởi nghĩa lớn nhỏ:
 Thời kỳ Bắc thuộc lần thứ ba chứng kiến sự chuyển biến mạnh mẽ trong ý thức dân tộc và sự trưởng thành của các tầng lớp hào trưởng người Việt. Dù chịu nhiều đau thương từ chiến tranh và bóc lột, người Việt vẫn duy trì được bản sắc và không ngừng đấu tranh. Sự kiện Khúc Thừa Dụ chiếm Đại La năm 905, nhân lúc nhà Đường suy sụp, đã chấm dứt hơn 300 năm Bắc thuộc, mở ra thời kỳ Tự chủ và tiền đề cho nền độc lập hoàn toàn của [[Nhà Ngô]] sau này. Tên gọi An Nam và Tĩnh Hải quân cũng trở thành những dấu mốc quan trọng trong lịch sử hành chính và ngoại giao của Việt Nam.
 
 ## Liên quan
-- [[Nhà Tùy]]
-- [[Nhà Đường]]
 - [[Khúc Thừa Dụ]]
 - [[Cao Biền]]
 - [[Mai Hắc Đế]]

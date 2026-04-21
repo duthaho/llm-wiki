@@ -52,6 +52,18 @@ describe('getArticlesByEra', () => {
     expect(articles[0]).toHaveProperty('era', 'nguyen-dynasty');
   });
 
+  it('should have articles for french-colonization era', () => {
+    const articles = getArticlesByEra('french-colonization');
+    expect(articles.length).toBeGreaterThan(0);
+    expect(articles.every(a => a.era === 'french-colonization')).toBe(true);
+  });
+
+  it('should have articles for independence-wars era', () => {
+    const articles = getArticlesByEra('independence-wars');
+    expect(articles.length).toBeGreaterThan(0);
+    expect(articles.every(a => a.era === 'independence-wars')).toBe(true);
+  });
+
   it('should return empty array for unknown era', () => {
     const articles = getArticlesByEra('unknown' as any);
     expect(articles).toEqual([]);

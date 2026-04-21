@@ -25,9 +25,7 @@ Tuy nhiên, sau khi dịch Hu Tống tử trận, người Việt dưới sự l
 Cái chết của Đồ Thư và thất bại của đạo quân chủ lực do ông chỉ huy là minh chứng rõ nét cho tinh thần bất khuất và khả năng kháng chiến dẻo dai của người Việt cổ trước các thế lực ngoại xâm hùng mạnh. Sự kiện này làm chậm lại quá trình xâm lược của nhà Tần, gây ra tổn thất nhân mạng nghiêm trọng cho đế chế này và buộc họ phải thay đổi phương sách cai trị cũng như nhân sự chỉ huy. Trận chiến cũng khẳng định vai trò lịch sử của Thục Phán trong việc đoàn kết các bộ tộc Âu Việt để chống lại kẻ thù chung, góp phần bảo vệ nền độc lập sơ khai của dân tộc trong thời kỳ tiền sử.
 
 ## Liên quan
-- [[Tần Thủy Hoàng]]
 - [[Thục Phán]]
 - [[An Dương Vương]]
 - [[Chiến tranh Tần-Việt]]
-- [[Nhà Tần]]
 - [[Bách Việt]]
