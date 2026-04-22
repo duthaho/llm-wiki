@@ -36,5 +36,3 @@ Nguyễn Phú Trọng được đánh giá là một trong những nhà lãnh đ
 - [[Đảng Cộng sản Việt Nam]]
 - [[Chiến dịch đốt lò]]
 - [[Ngoại giao cây tre]]
-- [[Quan hệ Việt Nam - Hoa Kỳ]]
-- [[Quan hệ Việt Nam - Trung Quốc]]

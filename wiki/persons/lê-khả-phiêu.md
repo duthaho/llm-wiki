@@ -38,7 +38,4 @@ Lê Khả Phiêu được ghi nhận là người đặt nền móng quan trọn
 ## Liên quan
 - [[Đảng Cộng sản Việt Nam]]
 - [[Quân đội nhân dân Việt Nam]]
-- [[Quan hệ Việt Nam - Hoa Kỳ]]
-- [[Quan hệ Việt Nam - Trung Quốc]]
-- [[Đại hội Đảng Cộng sản Việt Nam lần thứ IX]]
 - [[Nghĩa trang Mai Dịch]]

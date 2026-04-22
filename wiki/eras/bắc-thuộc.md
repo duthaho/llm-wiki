@@ -41,6 +41,5 @@ Thời kỳ Bắc thuộc để lại những dấu ấn sâu sắc trong lịch
 - [[Chiến thắng Bạch Đằng (938)]]
 - [[Lê Lợi]]
 - [[Khởi nghĩa Lam Sơn]]
-- [[Nhà Minh]]
 - [[Giao Châu]]
 - [[An Nam đô hộ phủ]]

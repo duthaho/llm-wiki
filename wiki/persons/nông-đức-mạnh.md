@@ -40,6 +40,4 @@ Nông Đức Mạnh để dấu ấn là nhà lãnh đạo tiên phong thuộc d
 - [[Đảng Cộng sản Việt Nam]]
 - [[Quốc hội Việt Nam]]
 - [[Thời kỳ Đổi mới]]
-- [[Quan hệ Việt Nam - Trung Quốc]]
-- [[Quan hệ Việt Nam - Nhật Bản]]
 - [[Nguyễn Phú Trọng]]

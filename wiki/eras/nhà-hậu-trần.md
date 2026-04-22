@@ -31,5 +31,4 @@ Mặc dù thất bại trong việc khôi phục nhà Trần và giành lại đ
 - [[Trùng Quang Đế]]
 - [[Đặng Dung]]
 - [[Trận Bô Cô]]
-- [[Nhà Minh]]
 - [[Khởi nghĩa Lam Sơn]]

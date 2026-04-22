@@ -30,4 +30,3 @@ Lê Thái Tổ không chỉ là người chấm dứt 20 năm đô hộ của nh
 - [[Bình Ngô đại cáo]]
 - [[Hồ Gươm]]
 - [[Lê Lai]]
-- [[Nhà Minh]]
